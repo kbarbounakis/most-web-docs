@@ -1,0 +1,1868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>NoopHandler - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-theme.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ApplicationConfig.html">ApplicationConfig</a></li><li><a href="ApplicationOptions.html">ApplicationOptions</a></li><li><i class='ionicons ion-ios-minus'></i><a href="AuthHandler.html">AuthHandler</a><ul class='methods'><li data-type='method'><a href="AuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="AuthHandler.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="AuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="AuthHandler.html#preExecuteResult">preExecuteResult</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="BasicAuthHandler.html">BasicAuthHandler</a><ul class='methods'><li data-type='method'><a href="BasicAuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="BasicAuthHandler.html#.parseBasicAuthorization">parseBasicAuthorization</a></li><li data-type='method'><a href="BasicAuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DirectiveEngine.html">DirectiveEngine</a><ul class='methods'><li data-type='method'><a href="DirectiveEngine.html#.createInstance">createInstance</a></li><li data-type='method'><a href="DirectiveEngine.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#endRequest">endRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#processRequest">processRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="EjsEngine.html">EjsEngine</a><ul class='methods'><li data-type='method'><a href="EjsEngine.html#createInstance">createInstance</a></li><li data-type='method'><a href="EjsEngine.html#render">render</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpApplication.html">HttpApplication</a><ul class='methods'><li data-type='method'><a href="HttpApplication.html#.app.document">app.document</a></li><li data-type='method'><a href="HttpApplication.html#controller">controller</a></li><li data-type='method'><a href="HttpApplication.html#createContext">createContext</a></li><li data-type='method'><a href="HttpApplication.html#db">db</a></li><li data-type='method'><a href="HttpApplication.html#decrypt">decrypt</a></li><li data-type='method'><a href="HttpApplication.html#directive">directive</a></li><li data-type='method'><a href="HttpApplication.html#encypt">encypt</a></li><li data-type='method'><a href="HttpApplication.html#execute">execute</a></li><li data-type='method'><a href="HttpApplication.html#executeExternalRequest">executeExternalRequest</a></li><li data-type='method'><a href="HttpApplication.html#executeRequest">executeRequest</a></li><li data-type='method'><a href="HttpApplication.html#extend">extend</a></li><li data-type='method'><a href="HttpApplication.html#getAuthCookie">getAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#init">init</a></li><li data-type='method'><a href="HttpApplication.html#mapPath">mapPath</a></li><li data-type='method'><a href="HttpApplication.html#onError">onError</a></li><li data-type='method'><a href="HttpApplication.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpApplication.html#resolveETag">resolveETag</a></li><li data-type='method'><a href="HttpApplication.html#resolveMime">resolveMime</a></li><li data-type='method'><a href="HttpApplication.html#service">service</a></li><li data-type='method'><a href="HttpApplication.html#setAuthCookie">setAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#start">start</a></li><li data-type='method'><a href="HttpApplication.html#unattended">unattended</a></li><li data-type='method'><a href="HttpApplication.html#unmodifiedRequest">unmodifiedRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpCache.html">HttpCache</a><ul class='methods'><li data-type='method'><a href="HttpCache.html#add">add</a></li><li data-type='method'><a href="HttpCache.html#ensure">ensure</a></li><li data-type='method'><a href="HttpCache.html#get">get</a></li><li data-type='method'><a href="HttpCache.html#init">init</a></li><li data-type='method'><a href="HttpCache.html#remove">remove</a></li><li data-type='method'><a href="HttpCache.html#removeAll">removeAll</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpContext.html">HttpContext</a><ul class='methods'><li data-type='method'><a href="HttpContext.html#cookie">cookie</a></li><li data-type='method'><a href="HttpContext.html#culture">culture</a></li><li data-type='method'><a href="HttpContext.html#currentHandler">currentHandler</a></li><li data-type='method'><a href="HttpContext.html#engine">engine</a></li><li data-type='method'><a href="HttpContext.html#handle">handle</a></li><li data-type='method'><a href="HttpContext.html#handleDelete">handleDelete</a></li><li data-type='method'><a href="HttpContext.html#handleGet">handleGet</a></li><li data-type='method'><a href="HttpContext.html#handlePost">handlePost</a></li><li data-type='method'><a href="HttpContext.html#handlePut">handlePut</a></li><li data-type='method'><a href="HttpContext.html#is">is</a></li><li data-type='method'><a href="HttpContext.html#removeCookie">removeCookie</a></li><li data-type='method'><a href="HttpContext.html#setCookie">setCookie</a></li><li data-type='method'><a href="HttpContext.html#translate">translate</a></li><li data-type='method'><a href="HttpContext.html#unattended">unattended</a></li><li data-type='method'><a href="HttpContext.html#validateAntiForgeryToken">validateAntiForgeryToken</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpDataContext.html">HttpDataContext</a><ul class='methods'><li data-type='method'><a href="HttpDataContext.html#dataTypes">dataTypes</a></li><li data-type='method'><a href="HttpDataContext.html#db">db</a></li><li data-type='method'><a href="HttpDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpHandler.html">HttpHandler</a><ul class='methods'><li data-type='method'><a href="HttpHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="HttpHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="HttpHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="HttpHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="HttpHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="HttpHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="HttpHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpRoute.html">HttpRoute</a><ul class='methods'><li data-type='method'><a href="HttpRoute.html#data">data</a></li><li data-type='method'><a href="HttpRoute.html#format">format</a></li><li data-type='method'><a href="HttpRoute.html#isMatch">isMatch</a></li><li data-type='method'><a href="HttpRoute.html#parse">parse</a></li></ul></li><li><a href="module-most-web.common.AbstractMethodException.html">AbstractMethodException</a></li><li><a href="module-most-web.common.FileNotFoundException.html">FileNotFoundException</a></li><li><a href="module-most-web.common.HttpBadRequest.html">HttpBadRequest</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.HttpException.html">HttpException</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.HttpException.html#.create">create</a></li></ul></li><li><a href="module-most-web.common.HttpForbiddenException.html">HttpForbiddenException</a></li><li><a href="module-most-web.common.HttpMethodNotAllowed.html">HttpMethodNotAllowed</a></li><li><a href="module-most-web.common.HttpNotFoundException.html">HttpNotFoundException</a></li><li><a href="module-most-web.common.HttpServerError.html">HttpServerError</a></li><li><a href="module-most-web.common.HttpUnauthorizedException.html">HttpUnauthorizedException</a></li><li><a href="module-most-web.controllers.HttpBaseController.html">HttpBaseController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.controllers.HttpDataController.html">HttpDataController</a><ul class='methods'><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#association">association</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#edit">edit</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#index">index</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#new">new</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#show">show</a></li></ul></li><li><a href="module-most-web.controllers.HttpLookupController.html">HttpLookupController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.AttachmentFileSystemStorage.html">AttachmentFileSystemStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolveUrl">resolveUrl</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#save">save</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.FileStorage.html">FileStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolveUrl">resolveUrl</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.HtmlWriter.html">HtmlWriter</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#toString">toString</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#write">write</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttribute">writeAttribute</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttributes">writeAttributes</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeBeginTag">writeBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeEndTag">writeEndTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeFullBeginTag">writeFullBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeText">writeText</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeTo">writeTo</a></li></ul></li><li><a href="module-most-web.mvc.HtmlViewHelper.html">HtmlViewHelper</a></li><li><a href="module-most-web.mvc.HttpContentResult.html">HttpContentResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpController.html">HttpController</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpController.html#action">action</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#content">content</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#empty">empty</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#file">file</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#html">html</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#js">js</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#json">json</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#jsvar">jsvar</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#redirect">redirect</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#result">result</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#view">view</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#xml">xml</a></li></ul></li><li><a href="module-most-web.mvc.HttpEmptyResult.html">HttpEmptyResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpFileResult.html">HttpFileResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpFileResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpJavascriptResult.html">HttpJavascriptResult</a></li><li><a href="module-most-web.mvc.HttpJsonResult.html">HttpJsonResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpRedirectResult.html">HttpRedirectResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpRedirectResult.html#execute">execute</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpResult.html">HttpResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#execute">execute</a></li><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#status">status</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewContext.html">HttpViewContext</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#$T">$T</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#render">render</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#translate">translate</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewEngine.html">HttpViewEngine</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewEngine.html#render">render</a></li></ul></li><li><a href="module-most-web.mvc.HttpViewEngineReference.html">HttpViewEngineReference</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewResult.html">HttpViewResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpXmlResult.html">HttpXmlResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="NoopHandler.html">NoopHandler</a><ul class='methods'><li data-type='method'><a href="NoopHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="NoopHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="NoopHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="NoopHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="NoopHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="NoopHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="NoopHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="NoopHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="NoopHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="PostHandler.html">PostHandler</a><ul class='methods'><li data-type='method'><a href="PostHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="PostHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="PostHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="PostHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="PostHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="PostHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="PostHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="PostHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="RouteParamsHandler.html">RouteParamsHandler</a></li><li><i class='ionicons ion-ios-minus'></i><a href="StaticHandler.html">StaticHandler</a><ul class='methods'><li data-type='method'><a href="StaticHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="StaticHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="StaticHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="StaticHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="StaticHandler.html#mapPath">mapPath</a></li><li data-type='method'><a href="StaticHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="StaticHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="StaticHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="StaticHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="UnknownPropertyDescriptor.html">UnknownPropertyDescriptor</a></li><li><i class='ionicons ion-ios-minus'></i><a href="UnknownValue.html">UnknownValue</a><ul class='methods'><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.extend">extend</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="ViewHandler.html">ViewHandler</a><ul class='methods'><li data-type='method'><a href="ViewHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="ViewHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="ViewHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="ViewHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="ViewHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="ViewHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="ViewHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="ViewHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="ViewHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="XFormsEngine.html">XFormsEngine</a><ul class='methods'><li data-type='method'><a href="XFormsEngine.html#render">render</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-most-web.html">most-web</a></li></ul><h3>Namespaces</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.html">common</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.html#.convertFromBase26">convertFromBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.convertToBase26">convertToBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.debug">debug</a></li><li data-type='method'><a href="module-most-web.common.html#.httpError">httpError</a></li><li data-type='method'><a href="module-most-web.common.html#.isEmptyString">isEmptyString</a></li><li data-type='method'><a href="module-most-web.common.html#.isFunction">isFunction</a></li><li data-type='method'><a href="module-most-web.common.html#.isHttpException">isHttpException</a></li><li data-type='method'><a href="module-most-web.common.html#.isNullOrUndefined">isNullOrUndefined</a></li><li data-type='method'><a href="module-most-web.common.html#.isNumber">isNumber</a></li><li data-type='method'><a href="module-most-web.common.html#.isObject">isObject</a></li><li data-type='method'><a href="module-most-web.common.html#.isRelativeUrl">isRelativeUrl</a></li><li data-type='method'><a href="module-most-web.common.html#.log">log</a></li><li data-type='method'><a href="module-most-web.common.html#.newGuid">newGuid</a></li><li data-type='method'><a href="module-most-web.common.html#.parseBoolean">parseBoolean</a></li><li data-type='method'><a href="module-most-web.common.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="module-most-web.common.html#.parseFloat">parseFloat</a></li><li data-type='method'><a href="module-most-web.common.html#.parseForm">parseForm</a></li><li data-type='method'><a href="module-most-web.common.html#.parseInt">parseInt</a></li><li data-type='method'><a href="module-most-web.common.html#.parseValue">parseValue</a></li><li data-type='method'><a href="module-most-web.common.html#.randomChars">randomChars</a></li><li data-type='method'><a href="module-most-web.common.html#.randomHex">randomHex</a></li><li data-type='method'><a href="module-most-web.common.html#.randomInt">randomInt</a></li></ul></li><li><a href="module-most-web.controllers.html">controllers</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.html">files</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.html#.createFileSystemStorage">createFileSystemStorage</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.html">html</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.html#.createHtmlWriter">createHtmlWriter</a></li><li data-type='method'><a href="module-most-web.html.html#.createInstance">createInstance</a></li></ul></li><li><a href="module-most-web.mvc.html">mvc</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">NoopHandler</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        NoopHandler
+        </h2>
+        
+            <div class="class-description">NoopHandler</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="NoopHandler"><span class="type-signature"></span>new NoopHandler<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="noop-handler.js.html">noop-handler.js</a>, <a href="noop-handler.js.html#line16">line 16</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="HttpHandler.html">HttpHandler</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="authenticateRequest"><span class="type-signature"></span>authenticateRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when a handler is going to set current user identity.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#authenticateRequest">HttpHandler#authenticateRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line179">line 179</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="authorizeRequest"><span class="type-signature"></span>authorizeRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when a handler has verified user authorization.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#authorizeRequest">HttpHandler#authorizeRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line201">line 201</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="beginRequest"><span class="type-signature"></span>beginRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs as the first event in the HTTP execution
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#beginRequest">HttpHandler#beginRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line157">line 157</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="createInstance"><span class="type-signature"></span>createInstance<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="noop-handler.js.html">noop-handler.js</a>, <a href="noop-handler.js.html#line23">line 23</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    HttpHandler
+</div>
+
+
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="endRequest"><span class="type-signature"></span>endRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs as the last event in the HTTP execution
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#endRequest">HttpHandler#endRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line286">line 286</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="mapRequest"><span class="type-signature"></span>mapRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when the handler is selected to respond to the request.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#mapRequest">HttpHandler#mapRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line212">line 212</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="postExecuteResult"><span class="type-signature"></span>postExecuteResult<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when application was succesfully executes an HTTP Result.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#postExecuteResult">HttpHandler#postExecuteResult</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line265">line 265</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="postMapRequest"><span class="type-signature"></span>postMapRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when application has mapped the current request to the appropriate handler.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#postMapRequest">HttpHandler#postMapRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line223">line 223</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="preExecuteResult"><span class="type-signature"></span>preExecuteResult<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when application starts executing an HTTP Result.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#preExecuteResult">HttpHandler#preExecuteResult</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line254">line 254</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="processRequest"><span class="type-signature"></span>processRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when application starts processing current HTTP request.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#processRequest">HttpHandler#processRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line243">line 243</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="validateRequest"><span class="type-signature"></span>validateRequest<span class="signature">(context, callback)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    Occurs when a handler is going to validate current HTTP request.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>context</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="HttpContext.html">HttpContext</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>callback</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+    <dt class="inherited-from">Inherited From:</dt>
+    <dd class="inherited-from"><ul class="dummy"><li>
+        <a href="HttpHandler.html#validateRequest">HttpHandler#validateRequest</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="index.js.html">index.js</a>, <a href="index.js.html#line168">line 168</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/layout.js"></script>
+
+</body>
+</html>

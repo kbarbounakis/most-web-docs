@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>http-context.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-theme.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ApplicationConfig.html">ApplicationConfig</a></li><li><a href="ApplicationOptions.html">ApplicationOptions</a></li><li><i class='ionicons ion-ios-minus'></i><a href="AuthHandler.html">AuthHandler</a><ul class='methods'><li data-type='method'><a href="AuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="AuthHandler.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="AuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="AuthHandler.html#preExecuteResult">preExecuteResult</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="BasicAuthHandler.html">BasicAuthHandler</a><ul class='methods'><li data-type='method'><a href="BasicAuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="BasicAuthHandler.html#.parseBasicAuthorization">parseBasicAuthorization</a></li><li data-type='method'><a href="BasicAuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DirectiveEngine.html">DirectiveEngine</a><ul class='methods'><li data-type='method'><a href="DirectiveEngine.html#.createInstance">createInstance</a></li><li data-type='method'><a href="DirectiveEngine.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#endRequest">endRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#processRequest">processRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="EjsEngine.html">EjsEngine</a><ul class='methods'><li data-type='method'><a href="EjsEngine.html#createInstance">createInstance</a></li><li data-type='method'><a href="EjsEngine.html#render">render</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpApplication.html">HttpApplication</a><ul class='methods'><li data-type='method'><a href="HttpApplication.html#.app.document">app.document</a></li><li data-type='method'><a href="HttpApplication.html#controller">controller</a></li><li data-type='method'><a href="HttpApplication.html#createContext">createContext</a></li><li data-type='method'><a href="HttpApplication.html#db">db</a></li><li data-type='method'><a href="HttpApplication.html#decrypt">decrypt</a></li><li data-type='method'><a href="HttpApplication.html#directive">directive</a></li><li data-type='method'><a href="HttpApplication.html#encypt">encypt</a></li><li data-type='method'><a href="HttpApplication.html#execute">execute</a></li><li data-type='method'><a href="HttpApplication.html#executeExternalRequest">executeExternalRequest</a></li><li data-type='method'><a href="HttpApplication.html#executeRequest">executeRequest</a></li><li data-type='method'><a href="HttpApplication.html#extend">extend</a></li><li data-type='method'><a href="HttpApplication.html#getAuthCookie">getAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#init">init</a></li><li data-type='method'><a href="HttpApplication.html#mapPath">mapPath</a></li><li data-type='method'><a href="HttpApplication.html#onError">onError</a></li><li data-type='method'><a href="HttpApplication.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpApplication.html#resolveETag">resolveETag</a></li><li data-type='method'><a href="HttpApplication.html#resolveMime">resolveMime</a></li><li data-type='method'><a href="HttpApplication.html#service">service</a></li><li data-type='method'><a href="HttpApplication.html#setAuthCookie">setAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#start">start</a></li><li data-type='method'><a href="HttpApplication.html#unattended">unattended</a></li><li data-type='method'><a href="HttpApplication.html#unmodifiedRequest">unmodifiedRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpCache.html">HttpCache</a><ul class='methods'><li data-type='method'><a href="HttpCache.html#add">add</a></li><li data-type='method'><a href="HttpCache.html#ensure">ensure</a></li><li data-type='method'><a href="HttpCache.html#get">get</a></li><li data-type='method'><a href="HttpCache.html#init">init</a></li><li data-type='method'><a href="HttpCache.html#remove">remove</a></li><li data-type='method'><a href="HttpCache.html#removeAll">removeAll</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpContext.html">HttpContext</a><ul class='methods'><li data-type='method'><a href="HttpContext.html#cookie">cookie</a></li><li data-type='method'><a href="HttpContext.html#culture">culture</a></li><li data-type='method'><a href="HttpContext.html#currentHandler">currentHandler</a></li><li data-type='method'><a href="HttpContext.html#engine">engine</a></li><li data-type='method'><a href="HttpContext.html#handle">handle</a></li><li data-type='method'><a href="HttpContext.html#handleDelete">handleDelete</a></li><li data-type='method'><a href="HttpContext.html#handleGet">handleGet</a></li><li data-type='method'><a href="HttpContext.html#handlePost">handlePost</a></li><li data-type='method'><a href="HttpContext.html#handlePut">handlePut</a></li><li data-type='method'><a href="HttpContext.html#is">is</a></li><li data-type='method'><a href="HttpContext.html#removeCookie">removeCookie</a></li><li data-type='method'><a href="HttpContext.html#setCookie">setCookie</a></li><li data-type='method'><a href="HttpContext.html#translate">translate</a></li><li data-type='method'><a href="HttpContext.html#unattended">unattended</a></li><li data-type='method'><a href="HttpContext.html#validateAntiForgeryToken">validateAntiForgeryToken</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpDataContext.html">HttpDataContext</a><ul class='methods'><li data-type='method'><a href="HttpDataContext.html#dataTypes">dataTypes</a></li><li data-type='method'><a href="HttpDataContext.html#db">db</a></li><li data-type='method'><a href="HttpDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpHandler.html">HttpHandler</a><ul class='methods'><li data-type='method'><a href="HttpHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="HttpHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="HttpHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="HttpHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="HttpHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="HttpHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="HttpHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpRoute.html">HttpRoute</a><ul class='methods'><li data-type='method'><a href="HttpRoute.html#data">data</a></li><li data-type='method'><a href="HttpRoute.html#format">format</a></li><li data-type='method'><a href="HttpRoute.html#isMatch">isMatch</a></li><li data-type='method'><a href="HttpRoute.html#parse">parse</a></li></ul></li><li><a href="module-most-web.common.AbstractMethodException.html">AbstractMethodException</a></li><li><a href="module-most-web.common.FileNotFoundException.html">FileNotFoundException</a></li><li><a href="module-most-web.common.HttpBadRequest.html">HttpBadRequest</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.HttpException.html">HttpException</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.HttpException.html#.create">create</a></li></ul></li><li><a href="module-most-web.common.HttpForbiddenException.html">HttpForbiddenException</a></li><li><a href="module-most-web.common.HttpMethodNotAllowed.html">HttpMethodNotAllowed</a></li><li><a href="module-most-web.common.HttpNotFoundException.html">HttpNotFoundException</a></li><li><a href="module-most-web.common.HttpServerError.html">HttpServerError</a></li><li><a href="module-most-web.common.HttpUnauthorizedException.html">HttpUnauthorizedException</a></li><li><a href="module-most-web.controllers.HttpBaseController.html">HttpBaseController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.controllers.HttpDataController.html">HttpDataController</a><ul class='methods'><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#association">association</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#edit">edit</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#index">index</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#new">new</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#show">show</a></li></ul></li><li><a href="module-most-web.controllers.HttpLookupController.html">HttpLookupController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.AttachmentFileSystemStorage.html">AttachmentFileSystemStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolveUrl">resolveUrl</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#save">save</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.FileStorage.html">FileStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolveUrl">resolveUrl</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.HtmlWriter.html">HtmlWriter</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#toString">toString</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#write">write</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttribute">writeAttribute</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttributes">writeAttributes</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeBeginTag">writeBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeEndTag">writeEndTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeFullBeginTag">writeFullBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeText">writeText</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeTo">writeTo</a></li></ul></li><li><a href="module-most-web.mvc.HtmlViewHelper.html">HtmlViewHelper</a></li><li><a href="module-most-web.mvc.HttpContentResult.html">HttpContentResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpController.html">HttpController</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpController.html#action">action</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#content">content</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#empty">empty</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#file">file</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#html">html</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#js">js</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#json">json</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#jsvar">jsvar</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#redirect">redirect</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#result">result</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#view">view</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#xml">xml</a></li></ul></li><li><a href="module-most-web.mvc.HttpEmptyResult.html">HttpEmptyResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpFileResult.html">HttpFileResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpFileResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpJavascriptResult.html">HttpJavascriptResult</a></li><li><a href="module-most-web.mvc.HttpJsonResult.html">HttpJsonResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpRedirectResult.html">HttpRedirectResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpRedirectResult.html#execute">execute</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpResult.html">HttpResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#execute">execute</a></li><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#status">status</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewContext.html">HttpViewContext</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#$T">$T</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#render">render</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#translate">translate</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewEngine.html">HttpViewEngine</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewEngine.html#render">render</a></li></ul></li><li><a href="module-most-web.mvc.HttpViewEngineReference.html">HttpViewEngineReference</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewResult.html">HttpViewResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpXmlResult.html">HttpXmlResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="NoopHandler.html">NoopHandler</a><ul class='methods'><li data-type='method'><a href="NoopHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="NoopHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="NoopHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="NoopHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="NoopHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="NoopHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="NoopHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="NoopHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="NoopHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="PostHandler.html">PostHandler</a><ul class='methods'><li data-type='method'><a href="PostHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="PostHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="PostHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="PostHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="PostHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="PostHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="PostHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="PostHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="RouteParamsHandler.html">RouteParamsHandler</a></li><li><i class='ionicons ion-ios-minus'></i><a href="StaticHandler.html">StaticHandler</a><ul class='methods'><li data-type='method'><a href="StaticHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="StaticHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="StaticHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="StaticHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="StaticHandler.html#mapPath">mapPath</a></li><li data-type='method'><a href="StaticHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="StaticHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="StaticHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="StaticHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="UnknownPropertyDescriptor.html">UnknownPropertyDescriptor</a></li><li><i class='ionicons ion-ios-minus'></i><a href="UnknownValue.html">UnknownValue</a><ul class='methods'><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.extend">extend</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="ViewHandler.html">ViewHandler</a><ul class='methods'><li data-type='method'><a href="ViewHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="ViewHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="ViewHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="ViewHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="ViewHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="ViewHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="ViewHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="ViewHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="ViewHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="XFormsEngine.html">XFormsEngine</a><ul class='methods'><li data-type='method'><a href="XFormsEngine.html#render">render</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-most-web.html">most-web</a></li></ul><h3>Namespaces</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.html">common</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.html#.convertFromBase26">convertFromBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.convertToBase26">convertToBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.debug">debug</a></li><li data-type='method'><a href="module-most-web.common.html#.httpError">httpError</a></li><li data-type='method'><a href="module-most-web.common.html#.isEmptyString">isEmptyString</a></li><li data-type='method'><a href="module-most-web.common.html#.isFunction">isFunction</a></li><li data-type='method'><a href="module-most-web.common.html#.isHttpException">isHttpException</a></li><li data-type='method'><a href="module-most-web.common.html#.isNullOrUndefined">isNullOrUndefined</a></li><li data-type='method'><a href="module-most-web.common.html#.isNumber">isNumber</a></li><li data-type='method'><a href="module-most-web.common.html#.isObject">isObject</a></li><li data-type='method'><a href="module-most-web.common.html#.isRelativeUrl">isRelativeUrl</a></li><li data-type='method'><a href="module-most-web.common.html#.log">log</a></li><li data-type='method'><a href="module-most-web.common.html#.newGuid">newGuid</a></li><li data-type='method'><a href="module-most-web.common.html#.parseBoolean">parseBoolean</a></li><li data-type='method'><a href="module-most-web.common.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="module-most-web.common.html#.parseFloat">parseFloat</a></li><li data-type='method'><a href="module-most-web.common.html#.parseForm">parseForm</a></li><li data-type='method'><a href="module-most-web.common.html#.parseInt">parseInt</a></li><li data-type='method'><a href="module-most-web.common.html#.parseValue">parseValue</a></li><li data-type='method'><a href="module-most-web.common.html#.randomChars">randomChars</a></li><li data-type='method'><a href="module-most-web.common.html#.randomHex">randomHex</a></li><li data-type='method'><a href="module-most-web.common.html#.randomInt">randomInt</a></li></ul></li><li><a href="module-most-web.controllers.html">controllers</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.html">files</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.html#.createFileSystemStorage">createFileSystemStorage</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.html">html</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.html#.createHtmlWriter">createHtmlWriter</a></li><li data-type='method'><a href="module-most-web.html.html#.createInstance">createInstance</a></li></ul></li><li><a href="module-most-web.mvc.html">mvc</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">http-context.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * MOST Web Framework
+ * A JavaScript Web Framework
+ * http://themost.io
+ *
+ * Copyright (c) 2014, Kyriakos Barbounakis k.barbounakis@gmail.com, Anthi Oikonomou anthioikonomou@gmail.com
+ *
+ * Released under the BSD3-Clause license
+ * Date: 2014-06-10
+ */
+'use strict';
+/**
+ * @ignore
+ */
+var path = require('path'),
+    util = require('util'),
+    fs = require('fs'),
+    da = require('most-data'),
+    array = require('most-array'),
+    url = require('url'),
+    common = require('./common');
+/**
+ * Creates an instance of HttpContext class.
+ * @class HttpContext
+ * @property {{extension:string,type:string}} mime - Gets an object which represents the mime type associated with this context.
+ * @property {string} format - Gets a string which represents the response format of this context (e.g html, json, js etc).
+ * @constructor
+ * @augments DataContext
+ * @augments EventEmitter2
+ * @implements DataContext
+ * @param {ClientRequest} request
+ * @param {ServerResponse} response
+ * @returns {HttpContext}
+ */
+function HttpContext(httpRequest, httpResponse) {
+    /**
+     * @type {ClientRequest}
+     */
+    this.request = httpRequest;
+    /**
+     *
+     * @type {ServerResponse}
+     */
+    this.response = httpResponse;
+    /**
+     *@type {HttpApplication}
+     */
+    this.application = undefined;
+    var __application__ = null;
+    Object.defineProperty(this, 'application', {
+        get: function () {
+            return __application__;
+        },
+        set: function (value) {
+            __application__ = value;
+        }, configurable: false, enumerable: false
+    });
+    var self = this;
+    Object.defineProperty(this, 'mime', {
+        get: function () {
+            var res = self.application.resolveMime(self.request.url);
+            //if no extension is defined
+            if (typeof res === 'undefined' || res == null) {
+                //resolve the defined mime type by filter application mime types
+                if (self.params &amp;&amp; self.params.mime) {
+                    res = self.application.config.mimes.find(function(x) {
+                       return x.type === self.params.mime;
+                    });
+                }
+                //or try to get accept header (e.g. text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8)
+                else if (self.request &amp;&amp; self.request.headers) {
+                    //get and split ACCEPT HTTP header
+                    var accept = self.request.headers['accept'], arr = accept.split(';');
+                    if (arr[0]) {
+                        //get acceptable mime types
+                        var mimes = arr[0].split(',');
+                        if (mimes.length>0) {
+                            //try to find the application mime associated with the first acceptable mime type
+                            res = self.application.config.mimes.find(function(x) {
+                                return x.type === mimes[0];
+                            });
+                        }
+                    }
+                }
+            }
+            return res;
+        }, configurable: false, enumerable: false
+    });
+
+    Object.defineProperty(this, 'format', {
+        get: function () {
+            var uri = url.parse(self.request.url);
+            var result = path.extname(uri.pathname);
+            if (result) {
+                return result.substr(1).toLowerCase();
+            }
+            else {
+                //get mime type
+                var mime = self.mime;
+                if (mime) {
+                    //and return the extension associated with this mime
+                    return mime.extension.substr(1).toLowerCase();
+                }
+            }
+        }, configurable: false, enumerable: false
+    });
+
+    /**
+     * Gets an object that represents HTTP query string variables.
+     * @type {*}
+     */
+    this.querystring = {};
+    /**
+     * Gets an object that represents route data variables
+     * @type {*}
+     */
+    this.data = undefined;
+    /**
+     * Gets an object that represents HTTP context parameters
+     * @type {*}
+     */
+    this.params = {};
+
+    var self = this;
+    var data = null;
+    Object.defineProperty(this, 'data', {
+        get: function () {
+            if (data)
+                return data;
+            if (self.request == null) {
+                data = {};
+                return data;
+            }
+            else if (self.request.routeData == null) {
+                data = {};
+                return data;
+            }
+            else {
+                data = {};
+                array(self.request.routeData).each(function (item) {
+                    data[item.name.replace(/^:/, '')] = item.value;
+                });
+                return data;
+            }
+        }, configurable: false, enumerable: false
+    });
+    /**
+     * @property {*} cookies - Gets a collection of HTTP Request cookies
+     */
+    Object.defineProperty(this, 'cookies', {
+        get: function () {
+            var list = {},
+                rc = self.request.headers.cookie;
+            rc &amp;&amp; rc.split(';').forEach(function( cookie ) {
+                var parts = cookie.split('=');
+                list[parts.shift().trim()] = unescape(parts.join('='));
+            });
+            return list;
+        }, configurable: false, enumerable: false
+    });
+
+    var jq = null, ng = null, doc, self = this;
+    /**
+     * @property {jQuery|HTMLElement|*} $ - Gets server jQuery module
+     */
+    Object.defineProperty(this, '$', {
+        get: function () {
+            if (jq)
+                return jq;
+            if (typeof doc === 'undefined')
+                doc = self.application.document();
+            jq =  doc.parentWindow.jQuery;
+            return jq;
+        }, configurable: false, enumerable: false
+    });
+    /**
+     * @property {angular} angular - Gets server angular module
+     */
+    Object.defineProperty(this, 'angular', {
+        get: function () {
+            if (ng)
+                return ng;
+            if (typeof doc === 'undefined')
+                doc = self.application.document();
+            ng =  doc.parentWindow.angular;
+            return ng;
+        }, configurable: false, enumerable: false
+    });
+    /**
+     * Gets or sets the current user identity
+     * @type {*}
+     */
+    this.user = null;
+    /**
+     * @type {string}
+     * @private
+     */
+    this._culture = undefined;
+    //call super class constructor
+    if (HttpContext.super_)
+        HttpContext.super_.call(this);
+
+    //class extension initiators
+    if (typeof this.init === 'function') {
+        //call init() method
+        this.init();
+    }
+
+}
+//todo: set HttpContext inheritance from configuration
+util.inherits(HttpContext, da.classes.DefaultDataContext);
+
+HttpContext.prototype.init = function() {
+    //
+};
+/**
+ * @param {string} name
+ * @param {*=} value
+ * @param {Date=} expires
+ * @param {string=} domain
+ * @param {string=} cookiePath
+ * @returns {string|undefined}
+ */
+HttpContext.prototype.cookie = function(name, value, expires, domain, cookiePath) {
+
+    if (typeof value==='undefined')
+    {
+        if (this.request) {
+            var cookies = common.parseCookies(this.request);
+            return cookies[name];
+        }
+        else
+            return null;
+    }
+    else {
+        var cookieValue;
+        if (value!=null) {
+            cookieValue = name + '=' + value.toString();
+            if (expires instanceof Date)
+                cookieValue += ';expires=' + expires.toUTCString();
+        }
+        else {
+            cookieValue = name + '=;expires=' + new Date('1970-01-01').toUTCString();
+        }
+        //set default cookie path to root
+        cookiePath = cookiePath || '/';
+        //set cookie domain
+        if (typeof domain === 'string')
+            cookieValue += ';domain=' + domain;
+        //set cookie path
+        if (typeof cookiePath === 'string')
+            cookieValue += ';path=' + cookiePath;
+        //set cookie
+        if (this.response) {
+            this.response.setHeader('Set-Cookie',cookieValue);
+        }
+    }
+};
+/**
+ * @param {string} name - The name of the cookie to be added
+ * @param {string|*} value - The value of the cookie
+ * @param {Date=} expires - An optional parameter which sets cookie's expiration date. If this parameters is missing or is null a session cookie will be set.
+ * @param {string=} domain - An optional parameter which sets the cookie's domain.
+ * @param {string=} cpath - An optional parameter which sets the cookie's path. The default value is the root path.
+ * @returns {string|undefined}
+ */
+HttpContext.prototype.setCookie = function(name, value, expires, domain, cpath) {
+    if (typeof name !== 'string')
+        throw 'Invalid argument. Argument [name] must be a string.';
+    if (typeof value !== 'string')
+        throw 'Invalid argument. Argument [value] must be a string.';
+    this.cookie(name, value, expires, domain, cpath);
+};
+
+/**
+ * @param {string} name - The name of the cookie to be deleted
+ * @param {string=} domain - An optional parameter which indicates cookie's domain.
+ * @param {string=} cpath - An optional parameter which indicates cookie's path. The default value is the root path.
+ * @returns {string|undefined}
+ */
+HttpContext.prototype.removeCookie = function(name, domain, cpath) {
+    if (typeof name !== 'string')
+        throw 'Invalid argument. Argument [name] must be a string.';
+
+    this.cookie(name, null, null , domain, cpath);
+};
+/**
+ * Executes the specified code in unattended mode.
+ * @param {function(function(Error=, *=))} fn
+ * @param {function(Error=, *=)} callback
+ */
+HttpContext.prototype.unattended = function(fn, callback) {
+    var self = this, interactiveUser;
+    callback = callback || function() {};
+    fn = fn || function() {};
+    if (self._unattended) {
+        try {
+            fn.call(self, function(err, result) {
+                callback(err, result);
+            });
+        }
+        catch(e) {
+            callback(e);
+        }
+        return;
+    }
+    //get unattended execution account
+    self.application.config.settings.auth = self.application.config.settings.auth || {};
+    var account = self.application.config.settings.auth.unattendedExecutionAccount;
+    //get interactive user
+    if (this.user) {
+        interactiveUser = { name:this.user.name,authenticationType: this.user.authenticationType };
+        //setting interactive user
+        self.interactiveUser = interactiveUser;
+    }
+    if (account) {
+        self.user = { name:account, authenticationType:'Basic' };
+    }
+    try {
+        self._unattended = true;
+        fn.call(self, function(err, result) {
+            //restore user
+            if (interactiveUser) {
+                self.user = util._extend({ }, interactiveUser);
+            }
+            delete self.interactiveUser;
+            delete self._unattended;
+            callback(err, result);
+        });
+    }
+    catch(e) {
+        //restore user
+        if (interactiveUser) {
+            self.user = util._extend({ }, interactiveUser);
+        }
+        delete self.interactiveUser;
+        delete self._unattended;
+        callback(e);
+    }
+};
+
+
+/**
+ * Gets or sets the current culture
+ * @param {String=} value
+ */
+HttpContext.prototype.culture = function(value) {
+    var self = this;
+    if (typeof value === 'undefined') {
+        if (this._culture)
+            return this._culture;
+
+        //get available culures and default culture
+        var cultures = ['en-us'], defaultCulture = 'en-us';
+        if (this.application.config.settings) {
+            if (this.application.config.settings['localization']) {
+                cultures = this.application.config.settings['localization']['cultures'] || cultures;
+                defaultCulture = this.application.config.settings['localization']['default'] || defaultCulture;
+            }
+        }
+        //get browser lang
+        var lang = defaultCulture;
+        //2. Validate request HTTP header accept-language
+        if (this.request) {
+            if (this.request.headers['accept-language']) {
+                var langs = this.request.headers['accept-language'].split(';');
+                if (langs.length>0) {
+                    lang = langs[0].split(',')[0] || defaultCulture;
+                }
+            }
+        }
+        //get request parameter lang
+        if (self.params) {
+            lang = self.params.lang || lang;
+            if (lang) {
+                var arr = cultures.filter(function(x) {
+                    return (x == lang.toLowerCase()) || (x.substr(0,2) == lang.toLowerCase().substr(0,2));
+                });
+                if (arr.length>0) {
+                    this._culture=arr[0];
+                    return this._culture;
+                }
+            }
+        }
+
+        this._culture = defaultCulture;
+        return this._culture;
+    }
+    else {
+        this._culture = value;
+    }
+};
+/**
+ * Performs cross-site request forgery validation against the specified token
+ * @param {string=} csrfToken
+ */
+HttpContext.prototype.validateAntiForgeryToken = function(csrfToken) {
+    var self = this;
+    if (typeof csrfToken === 'undefined') {
+        //try to get token from params
+        if (typeof self.params !== 'undefined')
+            csrfToken = self.params['_CSRFToken'];
+    }
+    if (typeof csrfToken !== 'string')
+        throw new common.HttpBadRequest('Bad request. Invalid cross-site request forgery token.');
+    if (csrfToken.length==0)
+        throw new common.HttpBadRequest('Bad request. Empty cross-site request forgery token.');
+    try {
+        var cookies = self.cookies, csrfCookieToken, csrfRequestToken;
+        if (cookies['.CSRF']) {
+            //try to decrypt cookie token
+            try {
+                csrfCookieToken = JSON.parse(self.application.decrypt(cookies['.CSRF']));
+            }
+            catch(e) {
+                throw new common.HttpBadRequest('Bad request.Invalid cross-site request forgery data.');
+            }
+            //then try to decrypt the token provided
+            try {
+                csrfRequestToken = JSON.parse(self.application.decrypt(csrfToken));
+            }
+            catch(e) {
+                throw new common.HttpBadRequest('Bad request.Invalid cross-site request forgery data.');
+            }
+            if ((typeof csrfCookieToken === 'object') &amp;&amp; (typeof csrfRequestToken === 'object')) {
+
+                var valid = true, tokenExpiration = 60;
+                //1. validate token equality
+                for(var key in csrfCookieToken) {
+                    if (csrfCookieToken.hasOwnProperty(key)) {
+                        if (csrfCookieToken[key]!==csrfRequestToken[key]) {
+                            valid = false;
+                            break;
+                        }
+                    }
+                }
+                if (valid==true) {
+                    //2. validate timestamp
+                    var timestamp = new Date(csrfCookieToken.date);
+                    var diff = Math.abs((new Date())-timestamp);
+                    if (diff&lt;0) {
+                        valid=false;
+                    }
+                    if (valid) {
+                        if (self.application.config.settings)
+                            if (self.application.config.settings.auth)
+                                if (self.application.config.settings.auth['csrfExpiration'])
+                                     tokenExpiration = parseInt(self.application.config.settings.auth['csrfExpiration']);
+                        if (diff>tokenExpiration*60*1000)
+                            valid=false;
+                    }
+                }
+                if (valid)
+                    return;
+
+            }
+            throw new common.HttpBadRequest('Bad request. A cross-site request forgery was detected.');
+        }
+        else {
+            throw new common.HttpBadRequest('Bad request.Missing cross-site request forgery data.');
+        }
+    }
+    catch(e) {
+        if (e.status)
+            throw e;
+        else
+            throw new common.HttpServerError('Request validation failed.');
+    }
+};
+
+HttpContext.prototype.writeFile = function (file) {
+    try {
+        var fs = require("fs");
+        var path = require("path");
+        var app = require('./index');
+        var response = this.response;
+        //check if file exists
+        if (!fs.existsSync(file))
+            throw new app.common.HttpNotFoundException();
+        //get file extension
+        var extensionName = path.extname(file);
+        //and try to find this extension to MIME types
+
+        //get MIME collection
+        var contentType = null;
+        var a = require('most-array');
+        var mime = a(app.current.config.mimes).firstOrDefault(function (x) {
+            return (x.extension == extensionName);
+        });
+        if (mime != null)
+            contentType = mime.type;
+        //throw exception (MIME not found)
+        if (contentType == null)
+            throw new app.common.HttpForbiddenException();
+
+        fs.readFile(file, "binary", function (err, stream) {
+            if (err) {
+                //todo:raise application asynchronous error
+                response.writeHead(500, {'Content-Type': 'text/plain'});
+                response.write('500 Internal Server Error');
+                response.end();
+                return;
+            }
+            response.writeHead(200, {'Content-Type': contentType});
+            response.write(stream, "binary");
+            response.end();
+        });
+
+    } catch (e) {
+        console.log(e.message);
+        throw e;
+    }
+};
+/**
+ * Checks whether the HTTP method of the current request is equal or not to the given parameter.
+ * @param {String|Array} method - The HTTP method (GET, POST, PUT, DELETE)
+ * */
+HttpContext.prototype.is = function (method) {
+    var self = this;
+    if (self.request == null)
+        return false;
+    if (util.isArray(method)) {
+        return (method.filter(function(x) { return self.request.method.toUpperCase() == x.toUpperCase(); }).length>0);
+    }
+    else {
+        if (typeof method !== 'string')
+            return false;
+        if (method=='*')
+            return true;
+        return (self.request.method.toUpperCase() == method.toUpperCase());
+    }
+
+};
+
+HttpContext.prototype.isPost = function () {
+    return this.is('POST');
+};
+/**
+ * @param {String|Array} method
+ * @param {Function} fn
+ * @returns {HttpContext}
+ */
+HttpContext.prototype.handle = function(method, fn) {
+    if (this.is(method)) {
+        this.handled = true;
+        fn.call(this);
+    }
+    return this;
+}
+
+HttpContext.prototype.unhandle = function(fn) {
+    if (!this.handled) {
+        fn.call(this);
+    }
+}
+
+/**
+ * Invokes the given function if the current HTTP method is equal to POST
+ * @param {Function()} fn
+ * @returns {HttpContext}
+ */
+HttpContext.prototype.handlePost = function(fn) {
+    return this.handle('POST', fn);
+};
+
+/**
+ * Invokes the given function if the current HTTP method is equal to GET
+ * @param {Function()} fn
+ * @returns {HttpContext}
+ */
+HttpContext.prototype.handleGet = function(fn) {
+    return this.handle('GET', fn);
+};
+
+
+/**
+ * Invokes the given function if the current HTTP method is equal to PUT
+ * @param {Function()} fn
+ * @returns {HttpContext}
+ */
+HttpContext.prototype.handlePut = function(fn) {
+    return this.handle('PUT', fn);
+};
+
+/**
+ * Invokes the given function if the current HTTP method is equal to PUT
+ * @param {Function()} fn
+ */
+HttpContext.prototype.handleDelete = function(fn) {
+    return this.handle('DELETE', fn);
+};
+
+/**
+ * Gets or sets the current HTTP handler
+ * @param {Object=} value
+ * @returns {Function|Object}
+ */
+HttpContext.prototype.currentHandler = function (value) {
+    if (value === undefined) {
+        return this.request.currentHandler;
+    }
+    else {
+        this.request.currentHandler = value;
+    }
+};
+/**
+ * Translates the given string to the language specified in this context
+ * @param {string} text - The string to translate
+ * @param {string=} lib - A string that represents the library which contains the source string. This arguments is optional. If this argument is missing, then the operation will use the default (global) library.
+ * @returns {*}
+ */
+HttpContext.prototype.translate = function(text, lib) {
+    try {
+        var self = this, app = self.application;
+        //todo::get current HTTP context locale
+        //ensure locale
+        var locale = this.culture();
+        //ensure localization library
+        lib = lib || 'global';
+        //get cached library object if any
+        app.config.locales = app.config.locales || {};
+        var library = app.config.locales[lib];
+        //if library has not been yet initialized
+        if (!library) {
+            //get library path
+            var file = app.mapPath('/locales/'.concat(lib,'.',locale,'.json'));
+            //if file does not exist
+            if (!fs.existsSync(file))
+            {
+                //return the give text
+                return text;
+            }
+            else {
+                //otherwise create library
+                library = app.config.locales[lib] = {};
+            }
+        }
+        if (!library[locale]) {
+            var file = app.mapPath('/locales/'.concat(lib,'.',locale,'.json'));
+            if (fs.existsSync(file))
+                library[locale] = JSON.parse(fs.readFileSync(file,'utf8'));
+        }
+        var result = text;
+        if (library[locale])
+                result = library[locale][text];
+        return result || text;
+    }
+    catch (e) {
+        console.log(e);
+        return text;
+    }
+};
+/**
+ * Translates the given string to the language specified in this context
+ * @param {string} text - The string to translate
+ * @param {string=} lib - A string that represents the library which contains the source string. This arguments is optional. If this argument is missing, then the operation will use the default (global) library.
+ * @returns {*}
+ */
+HttpContext.prototype.t = HttpContext.prototype.translate;
+
+/**
+ * Creates an instance of a view engine based on the given extension (e.g. ejs, md etc)
+ * @param {string} extension
+ * @returns {*}
+ */
+HttpContext.prototype.engine = function(extension) {
+    var item = this.application.config.engines.find(function(x) { return x.extension===extension; });
+    if (item) {
+        var engine = require(item.type);
+        if (typeof engine.createInstance !== 'function') {
+            throw new Error('Invalid view engine module.')
+        }
+        return engine.createInstance(this);
+    }
+};
+
+if (typeof exports !== 'undefined')
+    module.exports = {
+        /**
+         * @class HttpContext
+         */
+        HttpContext:HttpContext,
+        /**
+         * Creates an instance of HttpContext class.
+         * @param {ClientRequest} request
+         * @param {ServerResponse} response
+         * @returns {HttpContext}
+         */
+        createInstance: function (request, response) {
+
+            return new HttpContext(request, response);
+        }
+    }
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/layout.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>data-controller.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-theme.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ApplicationConfig.html">ApplicationConfig</a></li><li><a href="ApplicationOptions.html">ApplicationOptions</a></li><li><i class='ionicons ion-ios-minus'></i><a href="AuthHandler.html">AuthHandler</a><ul class='methods'><li data-type='method'><a href="AuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="AuthHandler.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="AuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="AuthHandler.html#preExecuteResult">preExecuteResult</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="BasicAuthHandler.html">BasicAuthHandler</a><ul class='methods'><li data-type='method'><a href="BasicAuthHandler.html#.createInstance">createInstance</a></li><li data-type='method'><a href="BasicAuthHandler.html#.parseBasicAuthorization">parseBasicAuthorization</a></li><li data-type='method'><a href="BasicAuthHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="BasicAuthHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="BasicAuthHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="DirectiveEngine.html">DirectiveEngine</a><ul class='methods'><li data-type='method'><a href="DirectiveEngine.html#.createInstance">createInstance</a></li><li data-type='method'><a href="DirectiveEngine.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#endRequest">endRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="DirectiveEngine.html#processRequest">processRequest</a></li><li data-type='method'><a href="DirectiveEngine.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="EjsEngine.html">EjsEngine</a><ul class='methods'><li data-type='method'><a href="EjsEngine.html#createInstance">createInstance</a></li><li data-type='method'><a href="EjsEngine.html#render">render</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpApplication.html">HttpApplication</a><ul class='methods'><li data-type='method'><a href="HttpApplication.html#.app.document">app.document</a></li><li data-type='method'><a href="HttpApplication.html#controller">controller</a></li><li data-type='method'><a href="HttpApplication.html#createContext">createContext</a></li><li data-type='method'><a href="HttpApplication.html#db">db</a></li><li data-type='method'><a href="HttpApplication.html#decrypt">decrypt</a></li><li data-type='method'><a href="HttpApplication.html#directive">directive</a></li><li data-type='method'><a href="HttpApplication.html#encypt">encypt</a></li><li data-type='method'><a href="HttpApplication.html#execute">execute</a></li><li data-type='method'><a href="HttpApplication.html#executeExternalRequest">executeExternalRequest</a></li><li data-type='method'><a href="HttpApplication.html#executeRequest">executeRequest</a></li><li data-type='method'><a href="HttpApplication.html#extend">extend</a></li><li data-type='method'><a href="HttpApplication.html#getAuthCookie">getAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#init">init</a></li><li data-type='method'><a href="HttpApplication.html#mapPath">mapPath</a></li><li data-type='method'><a href="HttpApplication.html#onError">onError</a></li><li data-type='method'><a href="HttpApplication.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpApplication.html#resolveETag">resolveETag</a></li><li data-type='method'><a href="HttpApplication.html#resolveMime">resolveMime</a></li><li data-type='method'><a href="HttpApplication.html#service">service</a></li><li data-type='method'><a href="HttpApplication.html#setAuthCookie">setAuthCookie</a></li><li data-type='method'><a href="HttpApplication.html#start">start</a></li><li data-type='method'><a href="HttpApplication.html#unattended">unattended</a></li><li data-type='method'><a href="HttpApplication.html#unmodifiedRequest">unmodifiedRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpCache.html">HttpCache</a><ul class='methods'><li data-type='method'><a href="HttpCache.html#add">add</a></li><li data-type='method'><a href="HttpCache.html#ensure">ensure</a></li><li data-type='method'><a href="HttpCache.html#get">get</a></li><li data-type='method'><a href="HttpCache.html#init">init</a></li><li data-type='method'><a href="HttpCache.html#remove">remove</a></li><li data-type='method'><a href="HttpCache.html#removeAll">removeAll</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpContext.html">HttpContext</a><ul class='methods'><li data-type='method'><a href="HttpContext.html#cookie">cookie</a></li><li data-type='method'><a href="HttpContext.html#culture">culture</a></li><li data-type='method'><a href="HttpContext.html#currentHandler">currentHandler</a></li><li data-type='method'><a href="HttpContext.html#engine">engine</a></li><li data-type='method'><a href="HttpContext.html#handle">handle</a></li><li data-type='method'><a href="HttpContext.html#handleDelete">handleDelete</a></li><li data-type='method'><a href="HttpContext.html#handleGet">handleGet</a></li><li data-type='method'><a href="HttpContext.html#handlePost">handlePost</a></li><li data-type='method'><a href="HttpContext.html#handlePut">handlePut</a></li><li data-type='method'><a href="HttpContext.html#is">is</a></li><li data-type='method'><a href="HttpContext.html#removeCookie">removeCookie</a></li><li data-type='method'><a href="HttpContext.html#setCookie">setCookie</a></li><li data-type='method'><a href="HttpContext.html#translate">translate</a></li><li data-type='method'><a href="HttpContext.html#unattended">unattended</a></li><li data-type='method'><a href="HttpContext.html#validateAntiForgeryToken">validateAntiForgeryToken</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpDataContext.html">HttpDataContext</a><ul class='methods'><li data-type='method'><a href="HttpDataContext.html#dataTypes">dataTypes</a></li><li data-type='method'><a href="HttpDataContext.html#db">db</a></li><li data-type='method'><a href="HttpDataContext.html#model">model</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpHandler.html">HttpHandler</a><ul class='methods'><li data-type='method'><a href="HttpHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="HttpHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="HttpHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="HttpHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="HttpHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="HttpHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="HttpHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="HttpHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="HttpHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="HttpRoute.html">HttpRoute</a><ul class='methods'><li data-type='method'><a href="HttpRoute.html#data">data</a></li><li data-type='method'><a href="HttpRoute.html#format">format</a></li><li data-type='method'><a href="HttpRoute.html#isMatch">isMatch</a></li><li data-type='method'><a href="HttpRoute.html#parse">parse</a></li></ul></li><li><a href="module-most-web.common.AbstractMethodException.html">AbstractMethodException</a></li><li><a href="module-most-web.common.FileNotFoundException.html">FileNotFoundException</a></li><li><a href="module-most-web.common.HttpBadRequest.html">HttpBadRequest</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.HttpException.html">HttpException</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.HttpException.html#.create">create</a></li></ul></li><li><a href="module-most-web.common.HttpForbiddenException.html">HttpForbiddenException</a></li><li><a href="module-most-web.common.HttpMethodNotAllowed.html">HttpMethodNotAllowed</a></li><li><a href="module-most-web.common.HttpNotFoundException.html">HttpNotFoundException</a></li><li><a href="module-most-web.common.HttpServerError.html">HttpServerError</a></li><li><a href="module-most-web.common.HttpUnauthorizedException.html">HttpUnauthorizedException</a></li><li><a href="module-most-web.controllers.HttpBaseController.html">HttpBaseController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.controllers.HttpDataController.html">HttpDataController</a><ul class='methods'><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#association">association</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#edit">edit</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#index">index</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#new">new</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.controllers.HttpDataController.html#show">show</a></li></ul></li><li><a href="module-most-web.controllers.HttpLookupController.html">HttpLookupController</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.AttachmentFileSystemStorage.html">AttachmentFileSystemStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#resolveUrl">resolveUrl</a></li><li data-type='method'><a href="module-most-web.files.AttachmentFileSystemStorage.html#save">save</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.FileStorage.html">FileStorage</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyFrom">copyFrom</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#copyTo">copyTo</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#createReadStream">createReadStream</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#exists">exists</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#find">find</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#findOne">findOne</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#init">init</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#remove">remove</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolvePhysicalPath">resolvePhysicalPath</a></li><li data-type='method'><a href="module-most-web.files.FileStorage.html#resolveUrl">resolveUrl</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.HtmlWriter.html">HtmlWriter</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#toString">toString</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#write">write</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttribute">writeAttribute</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeAttributes">writeAttributes</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeBeginTag">writeBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeEndTag">writeEndTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeFullBeginTag">writeFullBeginTag</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeText">writeText</a></li><li data-type='method'><a href="module-most-web.html.HtmlWriter.html#writeTo">writeTo</a></li></ul></li><li><a href="module-most-web.mvc.HtmlViewHelper.html">HtmlViewHelper</a></li><li><a href="module-most-web.mvc.HttpContentResult.html">HttpContentResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpController.html">HttpController</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpController.html#action">action</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#content">content</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#empty">empty</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#file">file</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#html">html</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#js">js</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#json">json</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#jsvar">jsvar</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#redirect">redirect</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#result">result</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#view">view</a></li><li data-type='method'><a href="module-most-web.mvc.HttpController.html#xml">xml</a></li></ul></li><li><a href="module-most-web.mvc.HttpEmptyResult.html">HttpEmptyResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpFileResult.html">HttpFileResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpFileResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpJavascriptResult.html">HttpJavascriptResult</a></li><li><a href="module-most-web.mvc.HttpJsonResult.html">HttpJsonResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpRedirectResult.html">HttpRedirectResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpRedirectResult.html#execute">execute</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpResult.html">HttpResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#execute">execute</a></li><li data-type='method'><a href="module-most-web.mvc.HttpResult.html#status">status</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewContext.html">HttpViewContext</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#$T">$T</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#render">render</a></li><li data-type='method'><a href="module-most-web.mvc.HttpViewContext.html#translate">translate</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewEngine.html">HttpViewEngine</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewEngine.html#render">render</a></li></ul></li><li><a href="module-most-web.mvc.HttpViewEngineReference.html">HttpViewEngineReference</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.mvc.HttpViewResult.html">HttpViewResult</a><ul class='methods'><li data-type='method'><a href="module-most-web.mvc.HttpViewResult.html#execute">execute</a></li></ul></li><li><a href="module-most-web.mvc.HttpXmlResult.html">HttpXmlResult</a></li><li><i class='ionicons ion-ios-minus'></i><a href="NoopHandler.html">NoopHandler</a><ul class='methods'><li data-type='method'><a href="NoopHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="NoopHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="NoopHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="NoopHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="NoopHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="NoopHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="NoopHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="NoopHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="NoopHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="NoopHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="PostHandler.html">PostHandler</a><ul class='methods'><li data-type='method'><a href="PostHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="PostHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="PostHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="PostHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="PostHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="PostHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="PostHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="PostHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="PostHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="RouteParamsHandler.html">RouteParamsHandler</a></li><li><i class='ionicons ion-ios-minus'></i><a href="StaticHandler.html">StaticHandler</a><ul class='methods'><li data-type='method'><a href="StaticHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="StaticHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="StaticHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="StaticHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="StaticHandler.html#mapPath">mapPath</a></li><li data-type='method'><a href="StaticHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="StaticHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="StaticHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="StaticHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="StaticHandler.html#validateRequest">validateRequest</a></li></ul></li><li><a href="UnknownPropertyDescriptor.html">UnknownPropertyDescriptor</a></li><li><i class='ionicons ion-ios-minus'></i><a href="UnknownValue.html">UnknownValue</a><ul class='methods'><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.convert">convert</a></li><li data-type='method'><a href="UnknownValue.html#.extend">extend</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="ViewHandler.html">ViewHandler</a><ul class='methods'><li data-type='method'><a href="ViewHandler.html#authenticateRequest">authenticateRequest</a></li><li data-type='method'><a href="ViewHandler.html#authorizeRequest">authorizeRequest</a></li><li data-type='method'><a href="ViewHandler.html#beginRequest">beginRequest</a></li><li data-type='method'><a href="ViewHandler.html#createInstance">createInstance</a></li><li data-type='method'><a href="ViewHandler.html#endRequest">endRequest</a></li><li data-type='method'><a href="ViewHandler.html#mapRequest">mapRequest</a></li><li data-type='method'><a href="ViewHandler.html#postExecuteResult">postExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#postMapRequest">postMapRequest</a></li><li data-type='method'><a href="ViewHandler.html#preExecuteResult">preExecuteResult</a></li><li data-type='method'><a href="ViewHandler.html#processRequest">processRequest</a></li><li data-type='method'><a href="ViewHandler.html#validateRequest">validateRequest</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="XFormsEngine.html">XFormsEngine</a><ul class='methods'><li data-type='method'><a href="XFormsEngine.html#render">render</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-most-web.html">most-web</a></li></ul><h3>Namespaces</h3><ul><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.common.html">common</a><ul class='methods'><li data-type='method'><a href="module-most-web.common.html#.convertFromBase26">convertFromBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.convertToBase26">convertToBase26</a></li><li data-type='method'><a href="module-most-web.common.html#.debug">debug</a></li><li data-type='method'><a href="module-most-web.common.html#.httpError">httpError</a></li><li data-type='method'><a href="module-most-web.common.html#.isEmptyString">isEmptyString</a></li><li data-type='method'><a href="module-most-web.common.html#.isFunction">isFunction</a></li><li data-type='method'><a href="module-most-web.common.html#.isHttpException">isHttpException</a></li><li data-type='method'><a href="module-most-web.common.html#.isNullOrUndefined">isNullOrUndefined</a></li><li data-type='method'><a href="module-most-web.common.html#.isNumber">isNumber</a></li><li data-type='method'><a href="module-most-web.common.html#.isObject">isObject</a></li><li data-type='method'><a href="module-most-web.common.html#.isRelativeUrl">isRelativeUrl</a></li><li data-type='method'><a href="module-most-web.common.html#.log">log</a></li><li data-type='method'><a href="module-most-web.common.html#.newGuid">newGuid</a></li><li data-type='method'><a href="module-most-web.common.html#.parseBoolean">parseBoolean</a></li><li data-type='method'><a href="module-most-web.common.html#.parseCookies">parseCookies</a></li><li data-type='method'><a href="module-most-web.common.html#.parseFloat">parseFloat</a></li><li data-type='method'><a href="module-most-web.common.html#.parseForm">parseForm</a></li><li data-type='method'><a href="module-most-web.common.html#.parseInt">parseInt</a></li><li data-type='method'><a href="module-most-web.common.html#.parseValue">parseValue</a></li><li data-type='method'><a href="module-most-web.common.html#.randomChars">randomChars</a></li><li data-type='method'><a href="module-most-web.common.html#.randomHex">randomHex</a></li><li data-type='method'><a href="module-most-web.common.html#.randomInt">randomInt</a></li></ul></li><li><a href="module-most-web.controllers.html">controllers</a></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.files.html">files</a><ul class='methods'><li data-type='method'><a href="module-most-web.files.html#.createFileSystemStorage">createFileSystemStorage</a></li></ul></li><li><i class='ionicons ion-ios-minus'></i><a href="module-most-web.html.html">html</a><ul class='methods'><li data-type='method'><a href="module-most-web.html.html#.createHtmlWriter">createHtmlWriter</a></li><li data-type='method'><a href="module-most-web.html.html#.createInstance">createInstance</a></li></ul></li><li><a href="module-most-web.mvc.html">mvc</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">data-controller.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * MOST Web Framework
+ * A JavaScript Web Framework
+ * http://themost.io
+ *
+ * Copyright (c) 2014, Kyriakos Barbounakis k.barbounakis@gmail.com, Anthi Oikonomou anthioikonomou@gmail.com
+ *
+ * Released under the BSD3-Clause license
+ * Date: 2014-06-09
+ */
+/**
+ * @ignore
+ */
+var util = require('util'),
+    mvc = require('./http-mvc'),
+    xml = require('most-xml'),
+    string = require('string'),
+    common = require('./common');
+/**
+ * @classdesc HttpDataController class describes a common MOST Web Framework data controller.
+ * This controller is inherited by default from all data models. It offers a set of basic actions for CRUD operations against data objects
+ * and allows filtering, paging, sorting and grouping data objects with options similar to [OData]{@link http://www.odata.org/}.
+ &lt;h2>Basic Features&lt;/h2>
+ &lt;h3>Data Filtering ($filter query option)&lt;/h3>
+ &lt;p>Logical Operators&lt;/p>
+ &lt;p>The following table contains the logical operators supported in the query language:&lt;/p>
+  &lt;table class="table-flat">
+    &lt;thead>&lt;tr>&lt;th>Operator&lt;/th>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+    &lt;tbody>
+        &lt;tr>&lt;td>eq&lt;/td>&lt;td>Equal&lt;/td>&lt;td>/Order/index.json?$filter=customer eq 353&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>ne&lt;/td>&lt;td>Not Equal&lt;/td>&lt;td>/Order/index.json?$filter=orderStatus/alternateName ne 'OrderDelivered'&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>gt&lt;/td>&lt;td>Greater than&lt;/td>&lt;td>/Order/index.json?$filter=orderedItem/price gt 1000&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>ge&lt;/td>&lt;td>Greater than or equal&lt;/td>&lt;td>/Order/index.json?$filter=orderedItem/price ge 500&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>lt&lt;/td>&lt;td>Lower than&lt;/td>&lt;td>/Order/index.json?$filter=orderedItem/price lt 500&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>le&lt;/td>&lt;td>Lower than or equal&lt;/td>&lt;td>/Order/index.json?$filter=orderedItem/price le 1000&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>and&lt;/td>&lt;td>Logical and&lt;/td>&lt;td>/Order/index.json?$filter=orderedItem/price gt 1000 and orderStatus/alternateName eq 'OrderPickup'&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>or&lt;/td>&lt;td>Logical or&lt;/td>&lt;td>/Order/index.json?$filter=orderStatus/alternateName eq 'OrderPickup' or orderStatus/alternateName eq 'OrderProcessing'&lt;/td>&lt;/tr>
+    &lt;/tbody>
+ &lt;/table>
+ &lt;p>Arithmetic Operators&lt;/p>
+ &lt;p>The following table contains the arithmetic operators supported in the query language:&lt;/p>
+ &lt;table class="table-flat">
+     &lt;thead>&lt;tr>&lt;th>Operator&lt;/th>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+     &lt;tbody>
+     &lt;tr>&lt;td>add&lt;/td>&lt;td>Addition&lt;/td>&lt;td>/Order/index.json?$filter=(orderedItem/price add 10) gt 1560&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>sub&lt;/td>&lt;td>Subtraction&lt;/td>&lt;td>/Order/index.json?$filter=(orderedItem/price sub 10) gt 1540&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>mul&lt;/td>&lt;td>Multiplication&lt;/td>&lt;td>/Order/index.json?$filter=(orderedItem/price mul 1.20) gt 1000&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>div&lt;/td>&lt;td>Division&lt;/td>&lt;td>/Order/index.json?$filter=(orderedItem/price div 2) le 500&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>mod&lt;/td>&lt;td>Modulo&lt;/td>&lt;td>/Order/index.json?$filter=(orderedItem/price mod 2) eq 0&lt;/td>&lt;/tr>
+     &lt;/tbody>
+ &lt;/table>
+ &lt;p>Functions&lt;/p>
+ &lt;p>A set of functions are also defined for use in $filter query option:&lt;/p>
+ &lt;table class="table-flat">
+     &lt;thead>&lt;tr>&lt;th>Function&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+     &lt;tbody>
+        &lt;tr>&lt;td colspan="2">&lt;b>String Functions&lt;/b>&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>startswith(field,string)&lt;/td>&lt;td>/Product/index.json?$filter=startswith(name,'Apple') eq true&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>endswith(field,string)&lt;/td>&lt;td>/Product/index.json?$filter=endswith(name,'Workstation') eq true&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>contains(field,string)&lt;/td>&lt;td>/Product/index.json?$filter=contains(name,'MacBook') eq true&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>length(field)&lt;/td>&lt;td>/Product/index.json?$filter=length(name) gt 40&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>indexof(field,string)&lt;/td>&lt;td>/Product/index.json?$filter=indexof(name,'Air') gt 1&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>substring(field,number)&lt;/td>&lt;td>/Product/index.json?$filter=substring(category,1) eq 'aptops'&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>substring(field,number,number)&lt;/td>&lt;td>/Product/index.json?$filter=substring(category,1,2) eq 'ap'&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>tolower(field)&lt;/td>&lt;td>/Product/index.json?$filter=tolower(category) eq 'laptops'&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>toupper(field)&lt;/td>&lt;td>/Product/index.json?$filter=toupper(category) eq 'LAPTOPS'&lt;/td>&lt;/tr>
+         &lt;tr>&lt;td>trim(field)&lt;/td>&lt;td>/Product/index.json?$filter=trim(category) eq 'Laptops'&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td colspan="2">&lt;b>Date Functions&lt;/b>&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>day(field)&lt;/td>&lt;td>/Order/index.json?$filter=day(orderDate) eq 4&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>month(field)&lt;/td>&lt;td>/Order/index.json?$filter=month(orderDate) eq 6&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>year(field)&lt;/td>&lt;td>/Order/index.json?$filter=year(orderDate) ge 2014&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>hour(field)&lt;/td>&lt;td>/Order/index.json?$filter=hour(orderDate) ge 12 and hour(orderDate) lt 14&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>minute(field)&lt;/td>&lt;td>/Order/index.json?$filter=minute(orderDate) gt 15 and minute(orderDate) le 30&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>second(field)&lt;/td>&lt;td>/Order/index.json?$filter=second(orderDate) ge 0 and second(orderDate) le 45&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>date(field)&lt;/td>&lt;td>/Order/index.json?$filter=date(orderDate) eq '2015-03-20'&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td colspan="2">&lt;b>Math Functions&lt;/b>&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>round(field)&lt;/td>&lt;td>/Product/index.json?$filter=round(price) le 389&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>floor(field)&lt;/td>&lt;td>/Product/index.json?$filter=floor(price) eq 389&lt;/td>&lt;/tr>
+ &lt;tr>&lt;td>ceiling(field)&lt;/td>&lt;td>/Product/index.json?$filter=ceiling(price) eq 390&lt;/td>&lt;/tr>
+      &lt;/tbody>
+ &lt;/table>
+ &lt;h3>Attribute Selection ($select query option)&lt;/h3>
+ &lt;p>The following table contains attribute selection expressions supported in the query language:&lt;/p>
+ &lt;table class="table-flat">
+     &lt;thead>&lt;tr>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+     &lt;tbody>
+     &lt;tr>&lt;td>Select attribute&lt;/td>&lt;td>/Order/index.json?$select=id,customer,orderStatus&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>Select attribute with alias&lt;/td>&lt;td>/Order/index.json?$select=id,customer/description as customerName,orderStatus/name as orderStatusName&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>Select attribute with aggregation&lt;/td>&lt;td>/Order/index.json?$select=count(id) as totalCount&amp;$filter=orderStatus/alternateName eq 'OrderProcessing'&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>&amp;nbsp;&lt;/td>&lt;td>/Product/index.json?$select=max(price) as maxPrice&amp;$filter=category eq 'Laptops'&lt;/td>&lt;/tr>
+     &lt;tr>&lt;td>&amp;nbsp;&lt;/td>&lt;td>/Product/index.json?$select=min(price) as minPrice&amp;$filter=category eq 'Laptops'&lt;/td>&lt;/tr>
+ &lt;/tbody>
+ &lt;/table>
+ &lt;h3>Data Sorting ($orderby or $order query options)&lt;/h3>
+ &lt;table class="table-flat">
+     &lt;thead>&lt;tr>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+     &lt;tbody>
+        &lt;tr>&lt;td>Ascending order&lt;/td>&lt;td>/Product/index.json?$orderby=name&lt;/td>&lt;/tr>
+        &lt;tr>&lt;td>Descending order&lt;/td>&lt;td>/Product/index.json?$orderby=category desc,name desc&lt;/td>&lt;/tr>
+     &lt;/tbody>
+ &lt;/table>
+  &lt;h3>Data Paging ($top, $skip and $inlinecount query options)&lt;/h3>
+ &lt;p>The $top query option allows developers to apply paging in the result-set by giving the max number of records for each page. The default value is 25.
+ The $skip query option provides a way to skip a number of records. The default value is 0.
+ The $inlinecount query option includes in the result-set the total number of records of the query expression provided:
+ &lt;pre class="prettyprint">&lt;code>
+ {
+     "total": 94,
+     "records": [ ... ]
+ }
+  &lt;/code>&lt;/pre>
+ &lt;p>The default value is false.&lt;/p>
+  &lt;/p>
+   &lt;table class="table-flat">
+      &lt;thead>&lt;tr>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+      &lt;tbody>
+      &lt;tr>&lt;td>Limit records&lt;/td>&lt;td>/Product/index.json?$top=5&lt;/td>&lt;/tr>
+      &lt;tr>&lt;td>Skip records&lt;/td>&lt;td>/Product/index.json?$top=5&amp;$skip=5&lt;/td>&lt;/tr>
+      &lt;tr>&lt;td>Paged records&lt;/td>&lt;td>/Product/index.json?$top=5&amp;$skip=5&amp;$inlinecount=true&lt;/td>&lt;/tr>
+      &lt;/tbody>
+  &lt;/table>
+  &lt;h3>Data Grouping ($groupby or $group query options)&lt;/h3>
+  &lt;p>The $groupby query option allows developers to group the result-set by one or more attributes&lt;/p>
+  &lt;table class="table-flat">
+  &lt;thead>&lt;tr>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+  &lt;tbody>
+  &lt;tr>&lt;td>group&lt;/td>&lt;td>/Product/index.json?$select=count(id) as totalCount,category&amp;$groupby=category&lt;/td>&lt;/tr>
+  &lt;tr>&lt;td>group and sort&lt;/td>&lt;td>/Product/index.json?$select=count(id) as totalCount,category&amp;$groupby=category&amp;$orderby=count(id) desc&lt;/td>&lt;/tr>
+  &lt;/tbody>
+  &lt;/table>
+ &lt;h3>Data Expanding ($expand)&lt;/h3>
+ &lt;p>The $expand query option forces response to include associated objects which are not marked as expandable by default.&lt;/p>
+ &lt;table class="table-flat">
+     &lt;thead>&lt;tr>&lt;th>Description&lt;/th>&lt;th>Example&lt;/th>&lt;/tr>&lt;/thead>
+     &lt;tbody>
+     &lt;tr>&lt;td>expand&lt;/td>&lt;td>/Order/index.json?$filter=orderStatus/alternateName eq 'OrderProcessing'&amp;$expand=customer&lt;/td>&lt;/tr>
+     &lt;/tbody>
+ &lt;/table>
+ &lt;p>The $expand option is optional for a &lt;a href="https://docs.themost.io/most-data/DataField.html">DataField&lt;/a> marked as expandable.&lt;/p>
+ * @class
+ * @constructor
+ * @augments HttpController
+ * @property {DataModel} model - Gets or sets the current data model.
+ * @memberOf module:most-web.controllers
+ */
+function HttpDataController()
+{
+    var model_;
+    var self = this;
+    Object.defineProperty(this, 'model', {
+        get: function() {
+            if (model_)
+                return model_;
+            model_ = self.context.model(self.name);
+            return model_;
+        },
+        set: function(value) {
+            model_ = value;
+        }, configurable:false, enumerable:false
+    });
+}
+util.inherits(HttpDataController, mvc.HttpController);
+
+/**
+ * Handles data object creation (e.g. /user/1/new.html, /user/1/new.json etc)
+ * @param {Function} callback
+ */
+HttpDataController.prototype.new = function (callback) {
+    try {
+        var self = this,
+            context = self.context;
+        context.handle(['GET'],function() {
+            callback(null, self.result());
+        }).handle(['POST', 'PUT'],function() {
+            var target = self.model.convert(context.params[self.model.name] || context.params.data, true);
+            self.model.save(target, function(err)
+            {
+                if (err) {
+                    callback(common.httpError(err));
+                }
+                else {
+                    if (context.params.attr('returnUrl'))
+                        callback(null, context.params.attr('returnUrl'));
+                    callback(null, self.result(target));
+                }
+            });
+        }).unhandle(function() {
+            callback(new common.HttpMethodNotAllowed());
+        });
+    }
+    catch (e) {
+        callback(common.httpError(e));
+    }
+};
+/**
+ * Handles data object edit (e.g. /user/1/edit.html, /user/1/edit.json etc)
+ * @param {Function} callback
+ */
+HttpDataController.prototype.edit = function (callback) {
+    try {
+        var self = this,
+            context = self.context;
+        context.handle(['POST', 'PUT'], function() {
+            //get context param
+            var target = self.model.convert(context.params[self.model.name] || context.params.data, true);
+            if (target) {
+                self.model.save(target, function(err)
+                {
+                    if (err) {
+                        console.log(err);
+                        console.log(err.stack);
+                        callback(common.httpError(err));
+                    }
+                    else {
+                        if (context.params.attr('returnUrl'))
+                            callback(null, context.params.attr('returnUrl'));
+                        callback(null, self.result(target));
+                    }
+                });
+            }
+            else {
+                callback(new common.HttpBadRequest());
+            }
+        }).handle('DELETE', function() {
+            //get context param
+            var target = context.params[self.model.name] || context.params.data;
+            if (target) {
+                //todo::check if object exists
+                self.model.remove(target, function(err)
+                {
+                    if (err) {
+                        callback(common.httpError(err));
+                    }
+                    else {
+                        if (context.params.attr('returnUrl'))
+                            callback(null, context.params.attr('returnUrl'));
+                        callback(null, self.result(null));
+                    }
+                });
+            }
+            else {
+                callback(new common.HttpBadRequest());
+            }
+        }).handle('GET', function() {
+            if (context.request.route) {
+                if (context.request.route.static) {
+                    callback(null, self.result());
+                    return;
+                }
+            }
+            //get context param (id)
+            var filter = null, id = context.params.attr('id');
+            if (id) {
+                //create the equivalent open data filter
+                filter = util.format('%s eq %s',self.model.primaryKey,id);
+            }
+            else {
+                //get the requested open data filter
+                filter = context.params.attr('$filter');
+            }
+            if (filter) {
+                self.model.filter(filter, function(err, q) {
+                    if (err) {
+                        callback(common.httpError(err));
+                        return;
+                    }
+                    q.take(1, function (err, result) {
+                        try {
+                            if (err) {
+                                callback(err);
+                            }
+                            else {
+                                if (result.length>0)
+                                    callback(null, self.result(result));
+                                else
+                                    callback(null, self.result(null));
+                            }
+                        }
+                        catch (e) {
+                            callback(common.httpError(e));
+                        }
+                    });
+                });
+            }
+            else {
+                callback(new common.HttpBadRequest());
+            }
+
+        }).unhandle(function() {
+            callback(new common.HttpMethodNotAllowed());
+        });
+
+    }
+    catch (e) {
+        callback(common.httpError(e));
+    }
+
+};
+
+HttpDataController.prototype.schema = function (callback) {
+    var self = this, context = self.context;
+    context.handle('GET', function() {
+        if (self.model) {
+            //prepare client model
+            var clone = JSON.parse(JSON.stringify(self.model));
+            var m = util._extend({}, clone);
+            //delete private properties
+            var keys = Object.keys(m);
+            for (var i = 0; i &lt; keys.length; i++) {
+                var key = keys[i];
+               if (key.indexOf("_")==0)
+                   delete m[key];
+            }
+            //delete other server properties
+            delete m.view;
+            delete m.source;
+            delete m.fields;
+            delete m.privileges;
+            delete m.constraints;
+            delete m.eventListeners;
+            //set fields equal attributes
+            m.attributes = JSON.parse(JSON.stringify(self.model.attributes));
+            m.attributes.forEach(function(x) {
+                var mapping = self.model.inferMapping(x.name);
+                if (mapping)
+                    x.mapping = JSON.parse(JSON.stringify(mapping));;
+                //delete private properties
+                delete x.value;
+                delete x.calculation;
+            });
+            //prepape views and view fields
+            if (m.views) {
+                m.views.forEach(function(view) {
+                    if (view.fields) {
+                        view.fields.forEach(function(field) {
+                            if (/\./.test(field.name)==false) {
+                                //extend view field
+                                var name = field.name;
+                                var mField = m.attributes.filter(function(y) {
+                                    return (y.name==name);
+                                })[0];
+                                if (mField) {
+                                    for (var key in mField) {
+                                        if (mField.hasOwnProperty(key) &amp;&amp; !field.hasOwnProperty(key)) {
+                                            field[key] = mField[key];
+                                        }
+                                    }
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+            callback(null, self.result(m));
+        }
+        else {
+            callback(new common.HttpNotFoundException());
+        }
+
+    }).unhandle(function() {
+        callback(new common.HttpMethodNotAllowed());
+    });
+}
+
+/**
+ * Handles data object display (e.g. /user/1/show.html, /user/1/show.json etc)
+ * @param {Function} callback
+ */
+HttpDataController.prototype.show = function (callback) {
+    try {
+        var self = this, context = self.context;
+        context.handle('GET', function() {
+            if (context.request.route) {
+                if (context.request.route.static) {
+                    callback(null, self.result());
+                    return;
+                }
+            }
+            var filter = null, id = context.params.attr('id');
+            if (id) {
+                //create the equivalent open data filter
+                filter = util.format('%s eq %s',self.model.primaryKey,id);
+            }
+            else {
+                //get the requested open data filter
+                filter = context.params.attr('$filter');
+            }
+            self.model.filter(filter, function(err, q) {
+                if (err) {
+                    callback(common.httpError(err));
+                    return;
+                }
+                q.take(1, function (err, result) {
+                    try {
+                        if (err) {
+                            callback(common.httpError(e));
+                        }
+                        else {
+                            if (result.length>0)
+                                callback(null, self.result(result));
+                            else
+                                callback(new common.HttpNotFoundException('Item Not Found'));
+                        }
+                    }
+                    catch (e) {
+                        callback(common.httpError(e));
+                    }
+                });
+            });
+        }).unhandle(function() {
+            callback(new common.HttpMethodNotAllowed());
+        });
+    }
+    catch (e) {
+        callback(e);
+    }
+}
+/**
+ * Handles data object deletion (e.g. /user/1/remove.html, /user/1/remove.json etc)
+ * @param {Function} callback
+ */
+HttpDataController.prototype.remove = function (callback) {
+    try {
+        var self = this, context = self.context;
+        context.handle(['POST','DELETE'], function() {
+            var target = context.params[self.model.name] || context.params.data;
+            if (target) {
+                self.model.remove(target, function(err)
+                {
+                    if (err) {
+                        callback(common.httpError(err));
+                    }
+                    else {
+                        if (context.params.attr('returnUrl'))
+                            callback(null, context.params.attr('returnUrl'));
+                        callback(null, self.result(target));
+                    }
+                });
+            }
+            else {
+                callback(new common.HttpBadRequest());
+            }
+        }).unhandle(function() {
+            callback(new common.HttpMethodNotAllowed());
+        });
+    }
+    catch (e) {
+        callback(common.httpError(e))
+    }
+}
+
+/**
+ * @param {Function(Error,DataQueryable)} callback
+ * @private
+ */
+HttpDataController.prototype.filter = function (callback) {
+
+    var self = this, params = self.context.params;
+
+    if (typeof self.model !== 'object' || self.model == null) {
+        callback(new Error('Model is of the wrong type or undefined.'));
+        return;
+    }
+
+    var filter = params['$filter'],
+        select = params['$select'],
+        skip = params['$skip'] || 0,
+        orderBy = params['$orderby'] || params.attr('$order'),
+        groupBy = params.attr('$group') || params.attr('$groupby'),
+        expand = params.attr('$expand');
+
+    self.model.filter(filter,
+        /**
+         * @param {Error} err
+         * @param {DataQueryable} q
+         */
+         function (err, q) {
+            try {
+                if (err) {
+                    callback(err);
+                }
+                else {
+                    //set $groupby
+                    if (groupBy) {
+                        var arr = groupBy.split(',');
+                        var fields = [];
+                        for (var i = 0; i &lt; arr.length; i++) {
+                            var item = string(arr[i]).trim().toString();
+                            var field = self.model.field(item);
+                            if (field) {
+                                fields.push(field.name);
+                            }
+                            else if (/(\w+)\((.*?)\)/i.test(item)) {
+                                fields.push(q.fieldOf(item));
+                            }
+                            else if (/\//.test(item)) {
+                                fields.push(item);
+                            }
+                        }
+                        if (fields.length>0) {
+                            q.groupBy(fields);
+                        }
+                    }
+                    //set $select
+                    if (select) {
+                        var arr = select.split(',');
+                        var fields = [];
+                        for (var i = 0; i &lt; arr.length; i++) {
+                            var item = string(arr[i]).trim().toString();
+                            var field = self.model.field(item);
+                            if (field) {
+                                fields.push(field.name);
+                            }
+                            else if (/(\w+)\((.*?)\)/i.test(item) || /^(\w+)\s+as\s+(.*?)$/i.test(item)) {
+                                fields.push(q.fieldOf(item));
+                            }
+                            else if (/\//.test(item)) {
+                                //pass nested field as string
+                                fields.push(item);
+                            }
+                        }
+                        if (fields.length>0) {
+                            q.select(fields);
+                        }
+                        else {
+                            //search for data view
+                            if (arr.length==1) {
+                                var view = self.model.dataviews(arr[0]);
+                                if (view) {
+                                    q.select(view.name);
+                                }
+                            }
+                        }
+                    }
+                    //set $skip
+                    q.skip(skip);
+                    //set $orderby
+                    if (orderBy) {
+                        var arr = orderBy.split(',');
+                        for (var i = 0; i &lt; arr.length; i++) {
+                            var item = string(arr[i]).trim().toString(), name = null, direction = 'asc';
+                            if (/ asc$/i.test(item)) {
+                                name=item.substr(0,item.length-4);
+                            }
+                            else if (/ desc$/i.test(item)) {
+                                direction = 'desc';
+                                name=item.substr(0,item.length-5);
+                            }
+                            else if (!/\s/.test(item)) {
+                                name = item;
+                            }
+                            if (name) {
+                                var field = self.model.field(name);
+                                //validate model field
+                                if (field) {
+                                    if (direction=='desc')
+                                        q.orderByDescending(name);
+                                    else
+                                        q.orderBy(name);
+                                }
+                                //validate aggregate functions or associated field expression e.g. user/username
+                                else if (/(\w+)\((.*?)\)/i.test(name) || /\//.test(name)) {
+                                    if (direction=='desc')
+                                        q.orderByDescending(name);
+                                    else
+                                        q.orderBy(name);
+                                }
+                                else if (/\//.test(name)) {
+                                    if (direction=='desc')
+                                        q.orderByDescending(name);
+                                    else
+                                        q.orderBy(name);
+                                }
+
+                            }
+                        }
+                    }
+                    if (expand) {
+                        if (expand.length>0) {
+                            expand.split(',').map(function(x) { return x.replace(/\s/g,''); }).forEach(function(x) {
+                                if (x.length)
+                                    q.expand(x.replace(/\s/g,''));
+                            });
+                        }
+                    }
+                    //return
+                    callback(null, q);
+                }
+            }
+            catch (e) {
+               callback(e);
+            }
+        });
+};
+/**
+ *
+ * @param {Function} callback
+ */
+HttpDataController.prototype.index = function(callback)
+{
+
+    try {
+        var self = this, context = self.context,
+            top = parseInt(self.context.params.$top),
+            take = top > 0 ? top : (top == -1 ? top : 25);
+        var count = /^true$/ig.test(context.params.attr('$inlinecount')) || false,
+            expand = context.params.attr('$expand'),
+            first = /^true$/ig.test(context.params.attr('$first')) || false,
+            asArray = /^true$/ig.test(context.params.attr('$array')) || false;
+        common.debug(context.request.url);
+        context.handle('GET', function() {
+            if (context.request.route) {
+                if (context.request.route.static) {
+                    callback(null, self.result([]));
+                    return;
+                }
+            }
+            self.filter(function(err, q) {
+                try {
+                    if (err) {
+                        callback(common.httpError(err));
+                    }
+                    else {
+
+                        if (expand) {
+                            if (expand.length>0) {
+                                var arr = expand.split(',');
+                                arr.forEach(function(x) {
+                                    q.expand(x.replace(/\s/g,''));
+                                });
+                            }
+                        }
+                        //check $first context param
+                        if (first) {
+                            q.first(function(err, result) {
+                                if (err) {
+                                    callback(common.httpError(err));
+                                }
+                                else {
+                                    callback(null, self.result(result));
+                                }
+                            });
+                            return;
+                        }
+
+                        var q1 = null;
+                        if (count) {
+                            q1 = q.clone();
+                        }
+                        //pass as array option
+                        q.asArray(asArray);
+                        if (take&lt;0) {
+                            q.all(function(err, result)
+                            {
+                                if (err) {
+                                    callback(common.httpError(err));
+                                    return;
+                                }
+                                if (count) {
+                                    result = { records: (result || []) };
+                                    result.total = result.records.length;
+                                    callback(null, self.result(result));
+                                }
+                                else {
+                                    callback(null, self.result(result || []));
+                                }
+                            });
+                        }
+                        else {
+                            q.take(take, function(err, result)
+                            {
+                                if (err) {
+                                    callback(common.httpError(err));
+                                    return;
+                                }
+                                if (count) {
+                                    q1.count(function(err, total) {
+                                        if (err) {
+                                            callback(common.httpError(err));
+                                        }
+                                        else {
+                                            result = { total: total, records: (result || []) };
+                                            callback(null, self.result(result));
+                                        }
+                                    });
+                                }
+                                else {
+                                    callback(null, self.result(result || []));
+                                }
+                            });
+                        }
+
+                    }
+                }
+                catch (e) {
+                    callback(e);
+                }
+            });
+        }).handle(['POST', 'PUT'], function() {
+            var target;
+            try {
+                target = self.model.convert(context.params[self.model.name] || context.params.data, true);
+            }
+            catch(err) {
+                common.log(err);
+                var er = new common.HttpException(422, "An error occured while converting data objects.", err.message);
+                er.code = 'EDATA';
+                return callback(er);
+            }
+            if (target) {
+                self.model.save(target, function(err)
+                {
+                    if (err) {
+                        common.log(err);
+                        callback(common.httpError(err));
+                    }
+                    else {
+                        callback(null, self.result(target));
+                    }
+                });
+            }
+            else {
+                return callback(new common.HttpBadRequest());
+            }
+        }).handle('DELETE', function() {
+            //get data
+            var target;
+            try {
+                target = self.model.convert(context.params[self.model.name] || context.params.data, true);
+            }
+            catch(err) {
+                common.log(err);
+                var er = new common.HttpException(422, "An error occured while converting data objects.", err.message);
+                er.code = 'EDATA';
+                return callback(er);
+            }
+            if (target) {
+                self.model.remove(target, function(err)
+                {
+                    if (err) {
+                        callback(common.httpError(err));
+                    }
+                    else {
+                        callback(null, self.result(target));
+                    }
+                });
+            }
+            else {
+                return callback(new common.HttpBadRequest());
+            }
+        }).unhandle(function() {
+            return callback(new common.HttpMethodNotAllowed());
+        });
+    }
+    catch (e) {
+        callback(common.httpError(e));
+    }
+};
+/**
+ * Returns an instance of HttpResult class which contains a collection of items based on the specified association.
+ * This association should be a one-to-many association or many-many association.
+ * A routing for this action may be:
+ &lt;pre class="prettyprint">&lt;code>
+ { "url":"/:controller/:parent/:model/index.json", "mime":"application/json", "action":"association" }
+ &lt;/code>&lt;/pre>
+ &lt;p>
+ or
+ &lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+ { "url":"/:controller/:parent/:model/index.html", "mime":"text/html", "action":"association" }
+ &lt;/code>&lt;/pre>
+  &lt;pre class="prettyprint">&lt;code>
+ //get orders in JSON format
+ /GET /Party/353/Order/index.json
+ &lt;/code>&lt;/pre>
+ &lt;p>
+ This action supports common query options like $filter, $order, $top, $skip etc.
+ The result will be a result-set with associated items:
+ &lt;/p>
+ &lt;pre class="prettyprint">&lt;code>
+    //JSON Results:
+ {
+        "total": 8,
+        "skip": 0,
+        "records": [
+            {
+            "id": 37,
+            "customer": 353,
+            "orderDate": "2015-05-05 01:19:34.000+03:00",
+            "orderedItem": {
+                "id": 407,
+                "additionalType": "Product",
+                "category": "PC Components",
+                "price": 1625.49,
+                "model": "HR5845",
+                "releaseDate": "2015-09-20 03:35:33.000+03:00",
+                "name": "Nvidia GeForce GTX 650 Ti Boost",
+                "dateCreated": "2015-11-23 14:53:04.884+02:00",
+                "dateModified": "2015-11-23 14:53:04.887+02:00"
+            },
+            "orderNumber": "OFV804",
+            "orderStatus": {
+                "id": 1,
+                "name": "Delivered",
+                "alternateName": "OrderDelivered",
+                "description": "Representing the successful delivery of an order."
+            },
+            "paymentDue": "2015-05-25 01:19:34.000+03:00",
+            "paymentMethod": {
+                "id": 6,
+                "name": "Direct Debit",
+                "alternateName": "DirectDebit",
+                "description": "Payment by direct debit"
+            },
+            "additionalType": "Order",
+            "dateCreated": "2015-11-23 21:00:18.264+02:00",
+            "dateModified": "2015-11-23 21:00:18.266+02:00"
+            }
+        ...]
+   ...
+}
+&lt;/code>&lt;/pre>
+ * @param {Function} callback - A callback function where the first argument will contain the Error object if an error occured, or null otherwise.
+ */
+HttpDataController.prototype.association = function(callback) {
+    try {
+        var self = this, parent = self.context.params.parent, model = self.context.params.model;
+        if (common.isNullOrUndefined(parent) || common.isNullOrUndefined(model)) {
+            callback(new common.HttpBadRequest());
+            return;
+        }
+        self.model.where(self.model.primaryKey).equal(parent).select([self.model.primaryKey]).first(function(err, result) {
+            if (err) {
+                common.log(err);
+                callback(new common.HttpServerError());
+                return;
+            }
+            if (common.isNullOrUndefined(result)) {
+                callback(new common.HttpNotFoundException());
+                return;
+            }
+            //get parent object (DataObject)
+            var obj = self.model.convert(result);
+            var associatedModel = self.context.model(model);
+            if (common.isNullOrUndefined(associatedModel)) {
+                callback(new common.HttpNotFoundException());
+                return;
+            }
+            /**
+             * Search for object junction
+             */
+            var field = self.model.attributes.filter(function(x) { return x.type === associatedModel.name; })[0], mapping;
+            if (field) {
+                /**
+                 * Get association mapping fo this field
+                 * @type {DataAssociationMapping}
+                 */
+                mapping = self.model.inferMapping(field.name);
+                if (mapping) {
+                    if ((mapping.parentModel===self.model.name) &amp;&amp; (mapping.associationType==='junction')) {
+                        /**
+                         * @type {DataQueryable}
+                         */
+                        var junction = obj.property(field.name);
+                        junction.model.filter(self.context.params, function(err, q) {
+                            if (err) {
+                                callback(err);
+                            }
+                            else {
+                                //merge properties
+                                if (q.query.$select) { junction.query.$select = q.query.$select; }
+                                if (q.query.$group) { junction.query.$group = q.query.$group; }
+                                if (q.query.$order) { junction.query.$order = q.query.$order; }
+                                if (q.query.$prepared) { junction.query.$where = q.query.$prepared; }
+                                if (q.query.$skip) { junction.query.$skip = q.query.$skip; }
+                                if (q.query.$take) { junction.query.$take = q.query.$take; }
+                                junction.list(function(err, result) {
+                                    callback(err, self.result(result));
+                                });
+                            }
+                        });
+                        return;
+                    }
+                }
+            }
+            field = associatedModel.attributes.filter(function(x) { return x.type === self.model.name; })[0];
+            if (common.isNullOrUndefined(field)) {
+                callback(new common.HttpNotFoundException());
+                return;
+            }
+            //get field mapping
+            mapping = associatedModel.inferMapping(field.name);
+            associatedModel.filter(self.context.params, function(err, q) {
+                if (err) {
+                    callback(err);
+                }
+                else {
+                    q.where(mapping.childField).equal(parent).list(function(err, result) {
+                        callback(err, self.result(result));
+                    });
+                }
+            });
+        });
+    }
+    catch(e) {
+        common.log(e);
+        callback(e, new common.HttpServerError());
+    }
+};
+
+if (typeof module !== 'undefined') module.exports = HttpDataController;</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+<script src="scripts/jquery.min.js"></script>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-route.min.js"></script>
+<script src="scripts/layout.js"></script>
+
+</body>
+</html>
